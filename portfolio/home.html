@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ankita | Portfolio</title>
+
+    <link rel="stylesheet" href="../styles/home.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ANKITA
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="home.html" class="active">
+                Home
+            </a>
+
+            <a href="education.html">
+                Education
+            </a>
+
+            <a href="skills.html">
+                Skills
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- ================= MOBILE MENU ================= -->
+
+        <div class="menu-btn" id="menuBtn">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= HOME SECTION ================= -->
+
+    <main>
+
+        <section class="hero">
+
+
+            <!-- ================= LEFT IMAGE ================= -->
+
+            <div class="hero-image">
+
+                <div class="image-frame">
+
+                    <img
+                        src="../images/WhatsApp Image 2026-07-16 at 20.18.09.jpeg"
+                        alt="Ankita"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= RIGHT CONTENT ================= -->
+
+            <div class="hero-content">
+
+
+                <p class="welcome">
+                    WELCOME TO MY PORTFOLIO
+                </p>
+
+
+                <h1>
+                    Hi, I'm
+                    <span>Ankita</span>
+                </h1>
+
+
+
+                <!-- ================= TYPING EFFECT ================= -->
+
+                <h2>
+
+                    I am a
+                    <span id="typing-text"></span>
+
+                    <span class="cursor">
+                        |
+                    </span>
+
+                </h2>
+
+
+
+                <!-- ================= ABOUT / INTRODUCTION ================= -->
+
+                <p class="intro-text">
+
+    I am a Psychology student with a genuine curiosity about
+    human behaviour, emotions, relationships, and the many
+    perspectives that influence the way people think, feel,
+    communicate, and interact with the world around them.
+
+    <br><br>
+
+    My academic journey in Psychology has encouraged me to
+    look beyond what is immediately visible and understand
+    people, situations, and experiences from different
+    perspectives. I enjoy learning about new concepts and
+    developing a deeper understanding of human thoughts,
+    emotions, and behaviour.
+
+    <br><br>
+
+    Alongside academics, I am passionate about singing and
+    enjoy expressing my thoughts and creativity through
+    music. Singing allows me to explore my creative side
+    while giving me a meaningful way to express myself.
+
+    <br><br>
+
+    I am naturally curious and enjoy discovering new things,
+    exploring new ideas, and learning from the experiences
+    around me. I believe that every experience offers an
+    opportunity to learn, grow, and understand something new.
+
+    <br><br>
+
+    I value curiosity, creativity, empathy, continuous
+    learning, and personal growth. My aim is to keep
+    developing my knowledge and skills while exploring
+    opportunities that allow me to learn, express myself,
+    and make a meaningful contribution.
+
+</p>
+
+
+
+                <!-- ================= TAGLINE ================= -->
+
+                <p class="tagline">
+
+                    Learning with curiosity.
+                    Growing with purpose.
+                    Creating with passion.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Ankita. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= TYPING EFFECT ================= -->
+
+    <script>
+
+        const words = [
+            "Psychology Student",
+            "Singer",
+            "Curious Learner",
+            "Explorer"
+        ];
+
+
+        const typingText =
+            document.getElementById("typing-text");
+
+
+        let wordIndex = 0;
+
+        let charIndex = 0;
+
+        let deleting = false;
+
+
+
+        function typeEffect() {
+
+            const currentWord =
+                words[wordIndex];
+
+
+            /* ================= TYPING ================= */
+
+            if (!deleting) {
+
+                typingText.textContent =
+                    currentWord.substring(
+                        0,
+                        charIndex + 1
+                    );
+
+                charIndex++;
+
+
+                /* Word completed */
+
+                if (
+                    charIndex ===
+                    currentWord.length
+                ) {
+
+                    deleting = true;
+
+                    setTimeout(
+                        typeEffect,
+                        1500
+                    );
+
+                    return;
+                }
+
+            }
+
+
+            /* ================= DELETING ================= */
+
+            else {
+
+                typingText.textContent =
+                    currentWord.substring(
+                        0,
+                        charIndex - 1
+                    );
+
+                charIndex--;
+
+
+                /* Word deleted */
+
+                if (charIndex === 0) {
+
+                    deleting = false;
+
+                    wordIndex =
+                        (wordIndex + 1)
+                        % words.length;
+
+                }
+
+            }
+
+
+            setTimeout(
+                typeEffect,
+                deleting ? 60 : 100
+            );
+
+        }
+
+
+        typeEffect();
+
+
+
+        /* ================= MOBILE NAVBAR ================= */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+
+        const navLinks =
+            document.querySelector(".nav-links");
+
+
+        menuBtn.addEventListener(
+            "click",
+            () => {
+
+                navLinks.classList.toggle("show");
+
+                menuBtn.classList.toggle("active");
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

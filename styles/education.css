@@ -1,0 +1,800 @@
+/* =========================================================
+   ANKITA PORTFOLIO - EDUCATION PAGE
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: 'DM Sans', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(177, 139, 220, 0.28),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(150, 112, 200, 0.22),
+            transparent 30%
+        ),
+        #e9ddf5;
+
+    color: #30243a;
+
+    overflow-x: hidden;
+
+    /* PAGE FADE-IN */
+    animation: pageFadeIn 0.9s ease-out both;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    background: rgba(245, 237, 251, 0.72);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom:
+        1px solid rgba(100, 65, 125, 0.10);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    font-family: 'Playfair Display', serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #3b2848;
+}
+
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 38px;
+}
+
+.nav-links a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #594965;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -9px;
+
+    width: 0;
+    height: 2px;
+
+    background: #8d5bb5;
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #74449c;
+
+    transform: translateY(-2px);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 22px;
+}
+
+.nav-links a.active {
+    color: #74449c;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-btn {
+    display: none;
+
+    width: 32px;
+
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+
+    width: 100%;
+    height: 3px;
+
+    margin: 5px 0;
+
+    border-radius: 10px;
+
+    background: #4b315a;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education-section {
+    min-height: 100vh;
+
+    padding:
+        145px 7%
+        70px;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+    max-width: 750px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+    animation:
+        headingFade 0.9s ease-out 0.15s both;
+}
+
+.small-title {
+    margin-bottom: 14px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #8050a2;
+}
+
+.section-heading h1 {
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(48px, 6vw, 70px);
+
+    line-height: 1.1;
+
+    color: #33253d;
+}
+
+.heading-description {
+    max-width: 650px;
+
+    margin: 20px auto 0;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #65566d;
+}
+
+
+/* =========================
+   EDUCATION CONTAINER
+========================= */
+
+.education-container {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+
+/* =========================
+   EDUCATION CARD
+========================= */
+
+.education-card {
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    border:
+        1px solid rgba(116, 67, 151, 0.14);
+
+    box-shadow:
+        0 20px 45px
+        rgba(67, 39, 85, 0.10);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation:
+        cardFadeIn 0.9s ease-out both;
+}
+
+
+/* Individual card entrance timing */
+
+.education-card:nth-child(1) {
+    animation-delay: 0.25s;
+}
+
+.education-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.education-card:nth-child(3) {
+    animation-delay: 0.55s;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 30px 60px
+        rgba(67, 39, 85, 0.17);
+}
+
+
+/* =========================
+   EDUCATION IMAGES
+========================= */
+
+.education-image {
+    width: 100%;
+
+    height: 320px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #d8c4e8;
+}
+
+.education-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+/* =========================
+   NURSERY / BOKULONI IMAGE
+========================= */
+
+/*
+   Nursery image ko card ke andar
+   maximum usable area diya gaya hai.
+*/
+
+.school-image {
+    width: 100%;
+
+    height: 400px;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #d8c4e8;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.school-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    padding: 0;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+/* =========================
+   IMAGE HOVER
+========================= */
+
+.education-card:hover
+.education-image img {
+    transform: scale(1.04);
+}
+
+
+/*
+   Nursery image ka zoom
+   intentionally halka rakha hai.
+*/
+
+.education-card:hover
+.school-image img {
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.education-content {
+    padding:
+        30px 32px 32px;
+}
+
+.education-level {
+    display: inline-block;
+
+    margin-bottom: 13px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #8050a2;
+}
+
+.education-content h2 {
+    font-family:
+        'Playfair Display',
+        serif;
+
+    font-size: 27px;
+
+    line-height: 1.3;
+
+    color: #3b2848;
+}
+
+.education-content p {
+    margin-top: 17px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #65566d;
+}
+
+
+/* =========================
+   DEGREE
+========================= */
+
+.degree {
+    margin-top: 10px !important;
+
+    font-size: 17px !important;
+
+    font-weight: 700;
+
+    color: #744397 !important;
+}
+
+
+/* =========================
+   DECORATIVE LINE
+========================= */
+
+.education-line {
+    width: 45px;
+
+    height: 2px;
+
+    margin-top: 23px;
+
+    background: #8d5bb5;
+}
+
+.education-note {
+    margin-top: 12px !important;
+
+    font-size: 12px !important;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #8050a2 !important;
+}
+
+
+/* =========================
+   COLLEGE CARD
+========================= */
+
+.college-card {
+    grid-column: 1 / -1;
+
+    max-width: 560px;
+
+    width: 100%;
+
+    justify-self: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 25px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #74627c;
+
+    border-top:
+        1px solid
+        rgba(85, 53, 105, 0.08);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+
+/* Whole page */
+
+@keyframes pageFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Heading */
+
+@keyframes headingFade {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* Cards */
+
+@keyframes cardFadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 22px;
+    }
+
+    .education-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .education-container {
+        gap: 25px;
+    }
+
+    .education-image {
+        height: 280px;
+    }
+
+    .school-image {
+        height: 350px;
+    }
+
+    .education-content h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 72px;
+
+        padding: 0 6%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+
+    /* Mobile Menu */
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 72px;
+
+        left: 5%;
+        right: 5%;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 22px;
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+        background:
+            rgba(249, 243, 252, 0.96);
+
+        backdrop-filter: blur(15px);
+
+        box-shadow:
+            0 20px 40px
+            rgba(61, 35, 77, 0.12);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+
+    /* Education */
+
+    .education-section {
+        padding:
+            115px 6%
+            50px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h1 {
+        font-size: 48px;
+    }
+
+    .heading-description {
+        font-size: 15px;
+    }
+
+
+    /* Cards */
+
+    .education-container {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .education-card {
+        width: 100%;
+    }
+
+    .college-card {
+        grid-column: auto;
+
+        max-width: none;
+    }
+
+    .education-image {
+        height: 280px;
+    }
+
+
+    /* Nursery */
+
+    .school-image {
+        height: 360px;
+    }
+
+    .education-content {
+        padding: 27px;
+    }
+
+    .education-content h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .education-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .section-heading h1 {
+        font-size: 40px;
+    }
+
+    .heading-description {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .education-image {
+        height: 230px;
+    }
+
+
+    /* Nursery image */
+
+    .school-image {
+        height: 300px;
+    }
+
+    .education-content {
+        padding: 23px;
+    }
+
+    .education-content h2 {
+        font-size: 22px;
+    }
+
+    .education-content p {
+        font-size: 14px;
+    }
+
+    .degree {
+        font-size: 16px !important;
+    }
+}

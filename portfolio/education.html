@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ankita | Education</title>
+
+    <link rel="stylesheet" href="../styles/education.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ANKITA
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="education.html" class="active">
+                Education
+            </a>
+
+            <a href="qualification.html">
+                Qualification
+            </a>
+
+            <a href="skills.html">
+                Skills
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <!-- Mobile Menu -->
+
+        <div class="menu-btn" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <main>
+
+        <section class="education-section">
+
+            <div class="section-heading">
+
+                <p class="small-title">
+                    MY ACADEMIC JOURNEY
+                </p>
+
+                <h1>
+                    Education
+                </h1>
+
+                <p class="heading-description">
+                    My educational journey reflects my growth
+                    from school education to higher studies,
+                    with a continuing interest in psychology,
+                    learning, and personal development.
+                </p>
+
+            </div>
+
+
+            <!-- ================= EDUCATION CARDS ================= -->
+
+            <div class="education-container">
+
+
+                <!-- ================= KG - CLASS 10 ================= -->
+
+                <article class="education-card">
+
+                    <div class="education-image school-image">
+
+                        <img
+                            src="../images/school-nursery.jpg"
+                            alt="Vivekananda Kendra Vidyalaya NEEPCO Bokuloni"
+                        >
+
+                    </div>
+
+                    <div class="education-content">
+
+                        <span class="education-level">
+                            KG — CLASS 10
+                        </span>
+
+                        <h2>
+                            Vivekananda Kendra Vidyalaya
+                            (VKV), NEEPCO, Bokuloni
+                        </h2>
+
+                        <p>
+                            I completed my schooling from
+                            Kindergarten through Class 10 at
+                            Vivekananda Kendra Vidyalaya (VKV),
+                            NEEPCO, Bokuloni.
+                        </p>
+
+                        <div class="education-line"></div>
+
+                        <p class="education-note">
+                            School Education
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= CLASS 11 - 12 ================= -->
+
+                <article class="education-card">
+
+                    <div class="education-image">
+
+                        <img
+                            src="../images/vkv.jpg"
+                            alt="Vivekananda Kendra Vidyalaya Dibrugarh"
+                        >
+
+                    </div>
+
+                    <div class="education-content">
+
+                        <span class="education-level">
+                            CLASS 11 — CLASS 12
+                        </span>
+
+                        <h2>
+                            Vivekananda Kendra Vidyalaya
+                            (VKV), Dibrugarh
+                        </h2>
+
+                        <p>
+                            I completed my higher secondary
+                            education from Class 11 to Class 12
+                            at Vivekananda Kendra Vidyalaya (VKV),
+                            Dibrugarh.
+                        </p>
+
+                        <div class="education-line"></div>
+
+                        <p class="education-note">
+                            Higher Secondary Education
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ================= COLLEGE ================= -->
+
+                <article class="education-card college-card">
+
+                    <div class="education-image">
+
+                        <img
+                            src="../images/adtu.jpg"
+                            alt="Assam Down Town University"
+                        >
+
+                    </div>
+
+                    <div class="education-content">
+
+                        <span class="education-level">
+                            UNDERGRADUATE
+                        </span>
+
+                        <h2>
+                            Assam Down Town University
+                        </h2>
+
+                        <p class="degree">
+                            B.A. in Psychology
+                        </p>
+
+                        <p>
+                            I am currently pursuing my
+                            Bachelor of Arts in Psychology,
+                            developing my understanding of
+                            human behaviour, mental processes,
+                            and psychological concepts.
+                        </p>
+
+                        <div class="education-line"></div>
+
+                        <p class="education-note">
+                            Bachelor's Degree • Psychology
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Ankita. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= MOBILE NAVBAR ================= -->
+
+    <script>
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.querySelector(".nav-links");
+
+        menuBtn.addEventListener(
+            "click",
+            () => {
+
+                navLinks.classList.toggle("show");
+
+                menuBtn.classList.toggle("active");
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

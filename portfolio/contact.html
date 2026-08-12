@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ankita | Contact</title>
+
+    <link rel="stylesheet" href="../styles/contact.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ANKITA
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="home.html">
+                Home
+            </a>
+
+            <a href="education.html">
+                Education
+            </a>
+
+            <a href="skills.html">
+                Skills
+            </a>
+
+            <a href="contact.html" class="active">
+                Contact
+            </a>
+
+        </nav>
+
+        <!-- Mobile Menu -->
+
+        <div class="menu-btn" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <main>
+
+        <section class="contact-section">
+
+            <!-- ================= HEADING ================= -->
+
+            <div class="section-heading">
+
+                <p class="small-title">
+                    GET IN TOUCH
+                </p>
+
+                <h1>
+                    Contact Me
+                </h1>
+
+                <p class="heading-description">
+                    Feel free to reach out through any of the
+                    contact details below. I would be happy to
+                    connect with you.
+                </p>
+
+            </div>
+
+
+            <!-- ================= CONTACT CARDS ================= -->
+
+            <div class="contact-container">
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:chiringanamika71@gmail.com"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        ✉
+                    </div>
+
+                    <div class="contact-content">
+
+                        <span>
+                            EMAIL
+                        </span>
+
+                        <h2>
+                            chiringanamika71@gmail.com
+                        </h2>
+
+                        <p>
+                            Send me an email
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- WHATSAPP -->
+
+                <a
+                    href="https://wa.me/919954349369"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div class="contact-content">
+
+                        <span>
+                            WHATSAPP
+                        </span>
+
+                        <h2>
+                            +91 99543 49369
+                        </h2>
+
+                        <p>
+                            Message me on WhatsApp
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- PHONE -->
+
+                <a
+                    href="tel:+919954349369"
+                    class="contact-card"
+                >
+
+                    <div class="contact-icon">
+                        ☎
+                    </div>
+
+                    <div class="contact-content">
+
+                        <span>
+                            PHONE
+                        </span>
+
+                        <h2>
+                            +91 99543 49369
+                        </h2>
+
+                        <p>
+                            Give me a call
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </a>
+
+
+                <!-- ADDRESS -->
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=T.R.+Phukan+Road%2C+Udaipur%2C+Chowkidingee%2C+Dibrugarh%2C+Assam%2C+India"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-card address-card"
+                >
+
+                    <div class="contact-icon">
+                        ⌖
+                    </div>
+
+                    <div class="contact-content">
+
+                        <span>
+                            LOCATION
+                        </span>
+
+                        <h2>
+                            Dibrugarh, Assam
+                        </h2>
+
+                        <p>
+                            T.R. Phukan Road, Udaipur,
+                            Chowkidingee, Dibrugarh,
+                            Assam, India
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 Ankita. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= MOBILE NAVBAR ================= -->
+
+    <script>
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.querySelector(".nav-links");
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("show");
+
+            menuBtn.classList.toggle("active");
+
+        });
+
+    </script>
+
+</body>
+
+</html>
